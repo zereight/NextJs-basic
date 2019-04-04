@@ -1,12 +1,12 @@
 import Link from "next/link";
+import Header from "../components/Header";
+import Layout from "../components/MyLayout";
 
-const index = () => ( //button써도 되고 a써도 된다 Onclick가능한 모든 태그가능
-    <Link href="/about">
-        <button>Go to About Page</button>
-    </Link>
 
-    
-  )
-  
-
-export default index;
+export default function index() {
+    return (
+        <Layout>
+            <p>Hello Next JS!</p>
+        </Layout>
+    )
+}

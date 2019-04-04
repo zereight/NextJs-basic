@@ -1,9 +1,10 @@
+import Layout from "../components/MyLayout";
 
 const about = () => (
 
-    <div>
+    <Layout>
         <h1>About 페이지입니다.</h1>
-    </div>
+    </Layout>
 
 )
 
