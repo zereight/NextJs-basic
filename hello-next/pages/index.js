@@ -1,12 +1,25 @@
 import Link from "next/link";
-import Header from "../components/Header";
 import Layout from "../components/MyLayout";
 
 
-export default function index() {
+const PostLink = (props) => (
+    <li>
+        <Link href={`/post?title=${props.title}`} >
+            <a>
+                {props.title}
+            </a>
+        </Link>
+    </li>
+)
+
+export default function Blog() {
     return (
         <Layout>
-            <p>Hello Next JS!</p>
+            <ul>
+                <PostLink title="Hello Next1 Js"/>
+                <PostLink title="Hello Next2 Js"/>
+                <PostLink title="Hello Next3 Js"/>
+            </ul>
         </Layout>
     )
 }
