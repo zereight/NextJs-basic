@@ -1,18 +1,29 @@
 
 import {withRouter} from "next/router"; //url인자전달 감지
+import Layout from "../components/MyLayout";
+import  fetch  from 'isomorphic-unfetch';
 
-const Post = (props) => {
-    
+const Post = (props) => (
+    <Layout>
+        <h1>{props.show.name}</h1>
+        <p>{props.show.summary.replace(/<[/]?p>/g,'')}</p>
+        <img src={props.show.image.medium}/>
+    </Layout>
+)
 
-    //console.log(props)
-    console.log(props)
-    return (
-        <div>
-             <h1>{props.router.query.title}</h1>
-        </div>
-    )
-    
 
-}
 
-export default withRouter(Post) 
+
+Post.getInitialProps = async function(context) {
+    const { id } = context.query
+    const res = await fetch(`https://api.tvmaze.com/shows/${id}`)
+    const show = await res.json()
+  
+    console.log(`Fetched show: ${show.name}`)
+  
+    return { show }
+  }  
+
+  export default Post
+
+
