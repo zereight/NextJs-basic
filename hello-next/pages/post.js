@@ -5,6 +5,7 @@ const Post = (props) => {
     
 
     //console.log(props)
+    console.log(props)
     return (
         <div>
              <h1>{props.router.query.title}</h1>
