@@ -9651,6 +9651,7 @@ var PostLink = function PostLink(props) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/post?title=".concat(props.title),
+    as: "/post/".concat(props.title),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -9704,7 +9705,7 @@ function Blog() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 0:
 /*!************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fuser21511816%2F%EB%B0%94%ED%83%95%ED%99%94%EB%A9%B4%2Fcode%2Fnextjs-basic%2Fhello-next%2Fpages%2Findex.js ***!
   \************************************************************************************************************************************************************************************/
@@ -9727,5 +9728,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]));;
+},[[0,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=index.js.map
